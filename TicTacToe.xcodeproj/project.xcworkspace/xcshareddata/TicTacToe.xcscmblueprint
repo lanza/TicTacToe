@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F3099A5E5AF85A21AC3649423763FBC4A5A27639",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9677CCD12093A5D7AFAF1AFF7ACDEC08C31CCA2B" : 0,
+    "F3099A5E5AF85A21AC3649423763FBC4A5A27639" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0F03ADA9-C2A4-44F2-89F6-55D20DE2AA7A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9677CCD12093A5D7AFAF1AFF7ACDEC08C31CCA2B" : "MySafari\/",
+    "F3099A5E5AF85A21AC3649423763FBC4A5A27639" : "TicTacToe\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TicTacToe",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TicTacToe.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nathanlanza\/MySafari.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9677CCD12093A5D7AFAF1AFF7ACDEC08C31CCA2B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nathanlanza\/TicTacToe.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F3099A5E5AF85A21AC3649423763FBC4A5A27639"
+    }
+  ]
+}

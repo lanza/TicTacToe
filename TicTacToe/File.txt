@@ -1,0 +1,10 @@
+if computer wins change the message
+invalidate the displaytimer after game is over
+
+make the computer delayed in it's input
+delay the computer a random amount of time
+make the computer pick it's selections intelligently
+
+web view
+
+create 4x4 etc
