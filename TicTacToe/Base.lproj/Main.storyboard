@@ -27,19 +27,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDW-hO-M4f">
-                                <rect key="frame" x="66" y="384" width="210" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qY-k0-zHm">
                                 <rect key="frame" x="258" y="430" width="46" height="30"/>
                                 <state key="normal" title="HELP"/>
                                 <connections>
-                                    <action selector="getHelp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X9X-b1-uav"/>
+                                    <segue destination="QqV-e2-U4U" kind="show" id="cNF-Uw-baQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDW-hO-M4f">
+                                <rect key="frame" x="55" y="384" width="210" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -50,13 +50,21 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="timerLabel" destination="aDW-hO-M4f" id="AIl-jJ-7o9"/>
-                        <outlet property="whosTurnLabel" destination="DnH-8g-0bP" id="rvf-wk-ZPa"/>
+                        <outlet property="timerLabel" destination="DnH-8g-0bP" id="Fhl-Zo-h2Z"/>
+                        <outlet property="whosTurnLabel" destination="aDW-hO-M4f" id="Etr-KL-rD2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="150" y="156"/>
+            <point key="canvasLocation" x="57" y="179"/>
+        </scene>
+        <!--NLWebView-->
+        <scene sceneID="1VO-QR-Gce">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NLWebView" id="QqV-e2-U4U" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCG-fb-ZEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505.5" y="179"/>
         </scene>
     </scenes>
 </document>

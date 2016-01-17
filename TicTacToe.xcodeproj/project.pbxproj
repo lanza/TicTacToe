@@ -13,13 +13,16 @@
 		D89D67B51C484D400005240E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89D67B31C484D400005240E /* Main.storyboard */; };
 		D89D67B71C484D400005240E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89D67B61C484D400005240E /* Assets.xcassets */; };
 		D89D67BA1C484D400005240E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89D67B81C484D400005240E /* LaunchScreen.storyboard */; };
-		D89D67F71C4878FC0005240E /* File.txt in Resources */ = {isa = PBXBuildFile; fileRef = D89D67F61C4878FC0005240E /* File.txt */; };
+		D89D67F71C4878FC0005240E /* ToDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = D89D67F61C4878FC0005240E /* ToDo.txt */; };
 		D89D68001C488A610005240E /* MatrixIterator.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D67FF1C488A610005240E /* MatrixIterator.m */; };
 		D89D68031C4893300005240E /* TimerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D68021C4893300005240E /* TimerHandler.m */; };
 		D89D69431C49A0CD0005240E /* NLWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89D69421C49A0CD0005240E /* NLWebView.framework */; };
 		D89D694E1C49A2BA0005240E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D89D69461C49A2BA0005240E /* Info.plist */; };
 		D89D694F1C49A2BA0005240E /* NLWebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89D69481C49A2BA0005240E /* NLWebView.storyboard */; };
 		D89D69501C49A2BA0005240E /* NLWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D694A1C49A2BA0005240E /* NLWebViewVC.m */; };
+		D89D69561C4B11090005240E /* GameBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D69551C4B11080005240E /* GameBrain.m */; };
+		D89D69591C4B1AD40005240E /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D69581C4B1AD40005240E /* Tile.m */; };
+		D89D695C1C4B1E1C0005240E /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D695B1C4B1E1C0005240E /* Matrix.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +46,7 @@
 		D89D67B61C484D400005240E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D89D67B91C484D400005240E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D89D67BB1C484D400005240E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D89D67F61C4878FC0005240E /* File.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File.txt; sourceTree = "<group>"; };
+		D89D67F61C4878FC0005240E /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		D89D67FE1C488A610005240E /* MatrixIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixIterator.h; sourceTree = "<group>"; };
 		D89D67FF1C488A610005240E /* MatrixIterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatrixIterator.m; sourceTree = "<group>"; };
 		D89D68011C4893300005240E /* TimerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimerHandler.h; path = ../TicTacToe/TimerHandler.h; sourceTree = "<group>"; };
@@ -55,6 +58,12 @@
 		D89D69491C49A2BA0005240E /* NLWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLWebViewVC.h; sourceTree = "<group>"; };
 		D89D694A1C49A2BA0005240E /* NLWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLWebViewVC.m; sourceTree = "<group>"; };
 		D89D694B1C49A2BA0005240E /* NLWebView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = NLWebView.xcodeproj; sourceTree = "<group>"; };
+		D89D69541C4B11080005240E /* GameBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBrain.h; sourceTree = "<group>"; };
+		D89D69551C4B11080005240E /* GameBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBrain.m; sourceTree = "<group>"; };
+		D89D69571C4B1AD40005240E /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		D89D69581C4B1AD40005240E /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
+		D89D695A1C4B1E1C0005240E /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		D89D695B1C4B1E1C0005240E /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +81,10 @@
 		D89D679E1C484D400005240E = {
 			isa = PBXGroup;
 			children = (
+				D89D69441C49A2BA0005240E /* NLWebView */,
 				D89D69421C49A0CD0005240E /* NLWebView.framework */,
 				D89D67A91C484D400005240E /* TicTacToe */,
 				D89D67A81C484D400005240E /* Products */,
-				D89D69441C49A2BA0005240E /* NLWebView */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,13 +101,15 @@
 			children = (
 				D89D67B01C484D400005240E /* TicTacToeViewController.h */,
 				D89D67B11C484D400005240E /* TicTacToeViewController.m */,
+				D89D695A1C4B1E1C0005240E /* Matrix.h */,
+				D89D695B1C4B1E1C0005240E /* Matrix.m */,
+				D89D69571C4B1AD40005240E /* Tile.h */,
+				D89D69581C4B1AD40005240E /* Tile.m */,
 				D89D67FE1C488A610005240E /* MatrixIterator.h */,
 				D89D67FF1C488A610005240E /* MatrixIterator.m */,
-				D89D67F61C4878FC0005240E /* File.txt */,
+				D89D67F61C4878FC0005240E /* ToDo.txt */,
 				D89D67B31C484D400005240E /* Main.storyboard */,
-				D89D67B61C484D400005240E /* Assets.xcassets */,
-				D89D67B81C484D400005240E /* LaunchScreen.storyboard */,
-				D89D67BB1C484D400005240E /* Info.plist */,
+				D89D695D1C4B28F60005240E /* NYI */,
 				D89D67AA1C484D400005240E /* Supporting Files */,
 			);
 			path = TicTacToe;
@@ -109,6 +120,9 @@
 			children = (
 				D89D67AD1C484D400005240E /* AppDelegate.h */,
 				D89D67AE1C484D400005240E /* AppDelegate.m */,
+				D89D67B61C484D400005240E /* Assets.xcassets */,
+				D89D67B81C484D400005240E /* LaunchScreen.storyboard */,
+				D89D67BB1C484D400005240E /* Info.plist */,
 				D89D67AB1C484D400005240E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -143,6 +157,15 @@
 				D89D69531C49A2BA0005240E /* NLWebView.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D89D695D1C4B28F60005240E /* NYI */ = {
+			isa = PBXGroup;
+			children = (
+				D89D69541C4B11080005240E /* GameBrain.h */,
+				D89D69551C4B11080005240E /* GameBrain.m */,
+			);
+			name = NYI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +243,7 @@
 			files = (
 				D89D67BA1C484D400005240E /* LaunchScreen.storyboard in Resources */,
 				D89D67B71C484D400005240E /* Assets.xcassets in Resources */,
-				D89D67F71C4878FC0005240E /* File.txt in Resources */,
+				D89D67F71C4878FC0005240E /* ToDo.txt in Resources */,
 				D89D694E1C49A2BA0005240E /* Info.plist in Resources */,
 				D89D694F1C49A2BA0005240E /* NLWebView.storyboard in Resources */,
 				D89D67B51C484D400005240E /* Main.storyboard in Resources */,
@@ -234,12 +257,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89D69561C4B11090005240E /* GameBrain.m in Sources */,
 				D89D68001C488A610005240E /* MatrixIterator.m in Sources */,
 				D89D68031C4893300005240E /* TimerHandler.m in Sources */,
 				D89D69501C49A2BA0005240E /* NLWebViewVC.m in Sources */,
 				D89D67B21C484D400005240E /* TicTacToeViewController.m in Sources */,
 				D89D67AF1C484D400005240E /* AppDelegate.m in Sources */,
 				D89D67AC1C484D400005240E /* main.m in Sources */,
+				D89D69591C4B1AD40005240E /* Tile.m in Sources */,
+				D89D695C1C4B1E1C0005240E /* Matrix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

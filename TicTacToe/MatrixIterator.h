@@ -1,11 +1,12 @@
-
+#import "Matrix.h"
 #import <Foundation/Foundation.h>
 
 @interface MatrixIterator : NSObject
 
-@property NSMutableArray *matrix;
+@property Matrix *matrix;
 
-- (NSMutableArray *)createMatrixWithRowsAndColumns:(int)rowsAndColumns;
 - (BOOL)checkMatches;
+
+- (instancetype)initWithMatrix:(Matrix *)matrix;
 
 @end

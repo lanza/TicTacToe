@@ -22,7 +22,7 @@
 - (void) timeIsUp {
     self.tttvc.timerLabelText = @"0.0";
     [self.displayTimer invalidate];
-    [self.tttvc displayVictoryMessage:@"Time is up."
+    [self.tttvc displayMessage:@"Time is up."
                           title:@"You lose."];
 }
 
