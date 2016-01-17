@@ -3,12 +3,18 @@
 
 @interface TimerHandler : NSObject
 
-@property TicTacToeViewController *tttvc;
+@property (weak) TicTacToeViewController *tttvc;
 
 @property NSTimer *timerKiller;
-@property NSTimer *timer;
-@property NSTimer *displayTimer;
+@property NSTimer *turnTimer;
+@property NSTimer *labelUpdatingTimer;
 
--(void)buttonPushed;
+@property double timeBetweenTurns;
+@property double decrementSize;
+
+
+-(void)startNewTurnTimer;
+
+-(void)invalidateAllTimers;
 
 @end

@@ -11,6 +11,7 @@
 @interface TicTacToeViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *whosTurnLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property (weak, nonatomic) UIButton *draggableButton;
 
 @property TimerHandler *timerHandler;
 @property MatrixIterator *matrixIterator;
@@ -23,19 +24,69 @@
 
 @property ComputerAI *computerAI;
 
+@property UIStackView *superStackView;
+
 @end
-
-
 
 
 @implementation TicTacToeViewController
 
+
+- (double)getCurrentTimeRemaining {
+    return [self.timerLabel.text doubleValue];
+}
+
+
+- (void)newTimerLabelText:(NSString *)text {
+    self.timerLabel.text = text;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //    self.draggableButton.enabled = NO;
     
     [self initialSetup];
-    [self newGameSetup];    
+    [self newGameSetup];
+    
+    self.draggableButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self reframeDraggableButton];
+    [self.view addSubview:self.draggableButton];
+    [self.draggableButton setTitle:@"X" forState:UIControlStateNormal];
+    
+    UIPanGestureRecognizer *pgr = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragButton:)];
+    [self.draggableButton addGestureRecognizer:pgr];
 }
+
+-(void)reframeDraggableButton {
+    
+    CGFloat mainViewWidth = self.view.frame.size.width;
+    CGFloat mainViewHeight = self.view.frame.size.height;
+    
+    CGRect newFrame = CGRectMake(mainViewWidth * 0.8, mainViewHeight * 0.8, mainViewWidth * 0.1, mainViewHeight * 0.1);
+    [self.draggableButton setFrame:newFrame];
+}
+
+- (void) dragButton:(UIPanGestureRecognizer *)sender {
+    CGPoint point = [sender translationInView:self.view];
+    CGRect currentLocation = self.draggableButton.frame;
+    CGRect newLocation = CGRectMake(currentLocation.origin.x + point.x, currentLocation.origin.y + point.y, currentLocation.size.width, currentLocation.size.height);
+    [self.draggableButton setFrame:newLocation];
+    [sender setTranslation:CGPointZero inView:self.view];
+    
+    
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        for (Tile *tile in self.matrix.buttonsArray) {
+            CGRect converted = [tile.superview convertRect:tile.frame toView:self.view];
+            if (CGRectIntersectsRect(converted, self.draggableButton.frame)) {
+                if (tile.enabled != NO) {
+                    [self squareButton:tile];
+                }
+            }
+        }
+        [self reframeDraggableButton];
+    }
+}
+
 
 - (void)initialSetup {
     self.matrix = [[Matrix alloc] initWithDimension:self.dimension];
@@ -43,9 +94,13 @@
     [self setUpViews];
     [self.matrix setUpMatrix];
     
+    
     self.decrementSize = 0.1;
     self.timeBetweenTurns = 3.0;
     self.timerHandler = [TimerHandler new];
+    self.timerHandler.decrementSize = self.decrementSize;
+    self.timerHandler.timeBetweenTurns = self.timeBetweenTurns;
+    self.timerHandler.tttvc = self;
     
     self.computerAI = [ComputerAI new];
     self.computerAI.matrix = self.matrix;
@@ -111,6 +166,7 @@
     
     superStackView.frame = CGRectMake(x, y, extent, extent);
     [self.view addSubview:superStackView];
+    self.superStackView = superStackView;
 }
 
 - (Tile *) setUpButtonsWithSize:(int)width {
@@ -137,6 +193,8 @@
             
             if ([self.matrixIterator checkMatches]) {
                 [self displayMessage:@"You win!" title:@"Congratulations!"];
+            } else {
+                [self.timerHandler startNewTurnTimer];
             }
             
             break;
@@ -148,6 +206,8 @@
             
             if ([self.matrixIterator checkMatches]) {
                 [self displayMessage:@"You lose!" title:@"The computer wins."];
+            } else {
+                [self.timerHandler startNewTurnTimer];
             }
             
             break;
@@ -159,11 +219,11 @@
     sender.enabled = NO;
     sender.alpha = 1;
     
-
+    
     
     self.timerLabel.text = @"3.0";
     
-    [self.timerHandler buttonPushed];
+    
     
     if (self.whosTurn == Computer) {
         [self computerPlay];
@@ -187,12 +247,15 @@
         [self displayMessage:@"It's a draw!" title:@"Nobody wins"];
     }
     
-
-
+    
+    
 }
 
 
 - (void) displayMessage:(NSString *)message title:(NSString *)title {
+    NSLog(@"displayMessage called");
+    [self.timerHandler invalidateAllTimers];
+    
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
                                                                              message:message
                                                                       preferredStyle:UIAlertControllerStyleAlert];

@@ -9,32 +9,40 @@
 
 @implementation TimerHandler
 
--(void)buttonPushed {
-    [self.timer invalidate];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.tttvc.timeBetweenTurns target:self selector:@selector(timeIsUp) userInfo:nil repeats:NO];
-    [self.displayTimer invalidate];
-    [self.timerKiller invalidate];
-    self.displayTimer = [NSTimer scheduledTimerWithTimeInterval:self.tttvc.decrementSize target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
-    double whatever = self.tttvc.timeBetweenTurns - self.tttvc.decrementSize + 0.01;
-    self.timerKiller = [NSTimer scheduledTimerWithTimeInterval:whatever target:self selector:@selector(killTimer) userInfo:nil repeats:NO];
+-(void)startNewTurnTimer {
+    [self invalidateAllTimers];
+    
+    self.turnTimer = [NSTimer scheduledTimerWithTimeInterval:self.timeBetweenTurns target:self selector:@selector(turnTimerEnded) userInfo:nil repeats:NO];
+    self.labelUpdatingTimer = [NSTimer scheduledTimerWithTimeInterval:self.decrementSize target:self selector:@selector(decrementTimerLabel) userInfo:nil repeats:YES];
 }
 
-- (void) timeIsUp {
-    self.tttvc.timerLabelText = @"0.0";
-    [self.displayTimer invalidate];
+-(void)invalidateAllTimers {
+    [self.turnTimer invalidate];
+    NSLog(@"turnTimer has been invalidated: %@", self.turnTimer);
+    [self.labelUpdatingTimer invalidate];
+    NSLog(@"labelUpdatingTimer has been invalidated: %@",self.labelUpdatingTimer);
+}
+
+
+- (void) turnTimerEnded {
+    NSLog(@"turnTimerEnded called");
+    [self updateTimerLabeltoTime:0.0];
     [self.tttvc displayMessage:@"Time is up."
                           title:@"You lose."];
+    
+    [self invalidateAllTimers];
 }
 
-- (void) updateTimerLabel {
-    double currentTime = [self.tttvc.timerLabelText doubleValue];
-    double something = currentTime - self.tttvc.decrementSize;
-    self.tttvc.timerLabelText = [NSString stringWithFormat:@"%.1f", something];
+- (void) updateTimerLabeltoTime:(double)time {
+    [self.tttvc newTimerLabelText:[NSString stringWithFormat:@"%f",time]];
 }
 
-- (void) killTimer {
-    [self.displayTimer invalidate];
+- (void) decrementTimerLabel {
+    double currentTime = [self.tttvc getCurrentTimeRemaining];
+    double decrementedTime = currentTime - self.tttvc.decrementSize;
+    [self updateTimerLabeltoTime:decrementedTime];
 }
+
 
 
 @end

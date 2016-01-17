@@ -51,8 +51,8 @@
 		D89D67F61C4878FC0005240E /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		D89D67FE1C488A610005240E /* MatrixIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixIterator.h; sourceTree = "<group>"; };
 		D89D67FF1C488A610005240E /* MatrixIterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatrixIterator.m; sourceTree = "<group>"; };
-		D89D68011C4893300005240E /* TimerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimerHandler.h; path = ../TicTacToe/TimerHandler.h; sourceTree = "<group>"; };
-		D89D68021C4893300005240E /* TimerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerHandler.m; path = ../TicTacToe/TimerHandler.m; sourceTree = "<group>"; };
+		D89D68011C4893300005240E /* TimerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerHandler.h; sourceTree = "<group>"; };
+		D89D68021C4893300005240E /* TimerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerHandler.m; sourceTree = "<group>"; };
 		D89D69421C49A0CD0005240E /* NLWebView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NLWebView.framework; path = /Library/Frameworks/NLWebView.framework; sourceTree = "<absolute>"; };
 		D89D69461C49A2BA0005240E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D89D69471C49A2BA0005240E /* NLWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLWebView.h; sourceTree = "<group>"; };
@@ -105,6 +105,8 @@
 		D89D67A91C484D400005240E /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				D89D68011C4893300005240E /* TimerHandler.h */,
+				D89D68021C4893300005240E /* TimerHandler.m */,
 				D89D695E1C4B5C4B0005240E /* ComputerAI.h */,
 				D89D695F1C4B5C4B0005240E /* ComputerAI.m */,
 				D89D67B01C484D400005240E /* TicTacToeViewController.h */,
@@ -141,8 +143,6 @@
 		D89D69441C49A2BA0005240E /* NLWebView */ = {
 			isa = PBXGroup;
 			children = (
-				D89D68011C4893300005240E /* TimerHandler.h */,
-				D89D68021C4893300005240E /* TimerHandler.m */,
 				D89D69451C49A2BA0005240E /* NLWebView */,
 				D89D694B1C49A2BA0005240E /* NLWebView.xcodeproj */,
 			);
