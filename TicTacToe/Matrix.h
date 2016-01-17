@@ -12,21 +12,17 @@ typedef enum {
 @interface Matrix : NSObject
 
 @property NSMutableArray *buttonsArray;
-@property NSMutableArray *matrix;
+
 @property int dimension;
 
+- (void)setUpMatrix;
+
 -(Tile *)tileAt:(int)index;
--(Tile *)tileAt:(int)first second:(int)second;
 
--(int)valueAt:(int)first second:(int)second;
+-(instancetype) initWithDimension:(int)dimension;
 
-- (instancetype)initWithDimension:(int)dimension;
 
 - (NSMutableArray *)objectAtIndexedSubscript:(int)idx;
-
-- (BOOL)doesElementMatchFor:(int)first second:(int)second change:(Change)change;
-
-- (void)buttonSelected:(Tile *)button byPlayer:(SquareOwnership)player;
 
 - (NSArray *)getRightDiagonal;
 - (NSArray *)getLeftDiagonal;

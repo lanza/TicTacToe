@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zaf-3o-T0N">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="258" y="430" width="46" height="30"/>
                                 <state key="normal" title="HELP"/>
                                 <connections>
-                                    <segue destination="QqV-e2-U4U" kind="show" id="cNF-Uw-baQ"/>
+                                    <segue destination="QqV-e2-U4U" kind="show" identifier="web" id="cNF-Uw-baQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDW-hO-M4f">
@@ -40,6 +40,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tv5-NK-tfx">
+                                <rect key="frame" x="0.0" y="450" width="80" height="30"/>
+                                <state key="normal" title="Dimensions"/>
+                                <connections>
+                                    <action selector="dimensionsButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UPO-8g-m7M"/>
+                                    <segue destination="lZd-7Y-blP" kind="unwind" unwindAction="dismissBackToDimensionScreen:" id="mTm-uy-7rB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -55,6 +63,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="lZd-7Y-blP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="57" y="179"/>
         </scene>
@@ -65,6 +74,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCG-fb-ZEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="505.5" y="179"/>
+        </scene>
+        <!--Dimension View Controller-->
+        <scene sceneID="eug-aB-hcx">
+            <objects>
+                <viewController id="Zaf-3o-T0N" customClass="DimensionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PzX-uD-jWR"/>
+                        <viewControllerLayoutGuide type="bottom" id="FqV-r8-Gg6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OKd-LH-GUN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAN-D8-AiB">
+                                <rect key="frame" x="112" y="225" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4Nv-d9-5xb"/>
+                                    <constraint firstAttribute="width" constant="97" id="rM4-jT-8ag"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="go"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many dimensions do you want your Tic-Tac-Toe game to be?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K17-QE-xo9">
+                                <rect key="frame" x="16" y="20" width="288" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="Ua6-xY-Lof"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWu-OY-6R1">
+                                <rect key="frame" x="145" y="263" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="AWc-5h-TSP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fAN-D8-AiB" firstAttribute="centerY" secondItem="OKd-LH-GUN" secondAttribute="centerY" id="6mh-wa-zea"/>
+                            <constraint firstItem="fAN-D8-AiB" firstAttribute="centerX" secondItem="OKd-LH-GUN" secondAttribute="centerX" id="cbD-t4-STa"/>
+                            <constraint firstItem="K17-QE-xo9" firstAttribute="top" secondItem="PzX-uD-jWR" secondAttribute="bottom" id="dfW-iO-Cl9"/>
+                            <constraint firstItem="K17-QE-xo9" firstAttribute="leading" secondItem="OKd-LH-GUN" secondAttribute="leadingMargin" id="fLU-1O-z39"/>
+                            <constraint firstItem="SWu-OY-6R1" firstAttribute="centerX" secondItem="OKd-LH-GUN" secondAttribute="centerX" id="tth-mZ-0bX"/>
+                            <constraint firstItem="SWu-OY-6R1" firstAttribute="top" secondItem="fAN-D8-AiB" secondAttribute="bottom" constant="8" id="uT2-8n-aLQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K17-QE-xo9" secondAttribute="trailing" id="yaY-9z-Mn9"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="textField" destination="fAN-D8-AiB" id="1Ge-cP-Xa5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTc-e5-cHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431" y="179"/>
         </scene>
     </scenes>
 </document>

@@ -16,6 +16,7 @@ typedef enum {
 @property NSString *timerLabelText;
 @property double timeBetweenTurns;
 @property double decrementSize;
+@property int dimension;
 
 - (void) displayMessage:(NSString *)message title:(NSString *)title ;
 

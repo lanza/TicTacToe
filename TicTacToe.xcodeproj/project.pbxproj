@@ -23,6 +23,8 @@
 		D89D69561C4B11090005240E /* GameBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D69551C4B11080005240E /* GameBrain.m */; };
 		D89D69591C4B1AD40005240E /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D69581C4B1AD40005240E /* Tile.m */; };
 		D89D695C1C4B1E1C0005240E /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D695B1C4B1E1C0005240E /* Matrix.m */; };
+		D89D69601C4B5C4B0005240E /* ComputerAI.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D695F1C4B5C4B0005240E /* ComputerAI.m */; };
+		D8F450A31C4B9AA30028AC93 /* DimensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F450A21C4B9AA30028AC93 /* DimensionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		D89D69581C4B1AD40005240E /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		D89D695A1C4B1E1C0005240E /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		D89D695B1C4B1E1C0005240E /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
+		D89D695E1C4B5C4B0005240E /* ComputerAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputerAI.h; sourceTree = "<group>"; };
+		D89D695F1C4B5C4B0005240E /* ComputerAI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComputerAI.m; sourceTree = "<group>"; };
+		D8F450A11C4B9AA30028AC93 /* DimensionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimensionViewController.h; sourceTree = "<group>"; };
+		D8F450A21C4B9AA30028AC93 /* DimensionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimensionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 		D89D67A91C484D400005240E /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				D89D695E1C4B5C4B0005240E /* ComputerAI.h */,
+				D89D695F1C4B5C4B0005240E /* ComputerAI.m */,
 				D89D67B01C484D400005240E /* TicTacToeViewController.h */,
 				D89D67B11C484D400005240E /* TicTacToeViewController.m */,
 				D89D695A1C4B1E1C0005240E /* Matrix.h */,
@@ -109,6 +117,8 @@
 				D89D67FF1C488A610005240E /* MatrixIterator.m */,
 				D89D67F61C4878FC0005240E /* ToDo.txt */,
 				D89D67B31C484D400005240E /* Main.storyboard */,
+				D8F450A11C4B9AA30028AC93 /* DimensionViewController.h */,
+				D8F450A21C4B9AA30028AC93 /* DimensionViewController.m */,
 				D89D695D1C4B28F60005240E /* NYI */,
 				D89D67AA1C484D400005240E /* Supporting Files */,
 			);
@@ -263,8 +273,10 @@
 				D89D69501C49A2BA0005240E /* NLWebViewVC.m in Sources */,
 				D89D67B21C484D400005240E /* TicTacToeViewController.m in Sources */,
 				D89D67AF1C484D400005240E /* AppDelegate.m in Sources */,
+				D89D69601C4B5C4B0005240E /* ComputerAI.m in Sources */,
 				D89D67AC1C484D400005240E /* main.m in Sources */,
 				D89D69591C4B1AD40005240E /* Tile.m in Sources */,
+				D8F450A31C4B9AA30028AC93 /* DimensionViewController.m in Sources */,
 				D89D695C1C4B1E1C0005240E /* Matrix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

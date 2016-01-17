@@ -13,5 +13,6 @@
 @property int firstIndex;
 @property int secondIndex;
 @property int arrayIndex;
+@property int buttonOwner;
 
 @end
